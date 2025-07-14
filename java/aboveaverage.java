@@ -1,14 +1,15 @@
 import java.util.*;
 import java.io.*;
+
 public class aboveaverage {
 	public static void main(String[] args) throws IOException {
-		BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-		int c = Integer.parseInt(scan.readLine()), arrInd, n = -1;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int c = Integer.parseInt(br.readLine()), arrInd, n = -1;
 		double avg = 0;
 		int[] arr;
 		ArrayList<Integer> list = new ArrayList<>();
 		while(c > 0) {
-			arr = Arrays.stream(scan.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+			arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 			arrInd = 0;
 			while(arrInd < arr.length) {
 				if(n == -1) {
