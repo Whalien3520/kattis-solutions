@@ -1,11 +1,12 @@
 import java.io.*;
 import java.math.*;
 import java.util.*;
+
 public class anagramcounting {
     public static void main(String[] args) throws IOException {
-        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s;
-        while((s = r.readLine()) != null) {
+        while((s = br.readLine()) != null) {
             int[] counts = new int[52];
             for(char c : s.toCharArray()) {
                 if('A' <= c && c <= 'Z')
@@ -30,5 +31,6 @@ public class anagramcounting {
             }
             System.out.println(ret);
         }
+        br.close();
     }
 }
