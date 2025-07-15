@@ -1,10 +1,12 @@
 import java.io.*;
+import java.util.*;
+
 public class aliennumbers {
 	public static void main(String[] args) throws IOException {
-		BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(scan.readLine()), c = 1;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine()), c = 1;
 		while(c <= n) {
-			String[] line = scan.readLine().split(" ");
+			String[] line = br.readLine().split(" ");
 			int dec = 0;
 			for(int i = 0; i < line[0].length(); i++)
 				dec += line[1].indexOf(line[0].charAt(i)) * (int)Math.pow(line[1].length(), line[0].length() - i - 1);
@@ -19,6 +21,6 @@ public class aliennumbers {
 			System.out.println();
 			c++;
 		}
-		scan.close();
+		br.close();
 	}
 }
