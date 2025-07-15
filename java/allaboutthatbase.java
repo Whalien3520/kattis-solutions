@@ -1,16 +1,18 @@
 import java.io.*;
 import java.math.BigInteger;
+import java.util.*;
+
 public class allaboutthatbase {
 	static String alphabet = "0123456789abcdefghijklmnopqrstuvwxyz0";
 	public static void main(String[] args) throws IOException {
-		BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(scan.readLine());
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
 		BigInteger maxOp = BigInteger.ONE;
 		for(int i = 0; i < 32; i++)
 			maxOp = maxOp.multiply(BigInteger.valueOf(2));
 		maxOp = maxOp.subtract(BigInteger.valueOf(1));
 		while(N-- > 0) {
-			String[] arr = scan.readLine().split(" ");
+			String[] arr = br.readLine().split(" ");
 			int base = Math.max(Math.max(minBase(arr[0]), minBase(arr[2])), minBase(arr[4])) - 1;
 			boolean valid = false;
 			while(++base < 37) {
@@ -44,7 +46,7 @@ public class allaboutthatbase {
 				System.out.print("invalid");
 			System.out.println();
 		}
-		scan.close();
+		br.close();
 	}
 	public static int minBase(String s) {
 		int ret = 0;
