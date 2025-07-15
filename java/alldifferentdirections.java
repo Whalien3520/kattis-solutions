@@ -1,13 +1,14 @@
 import java.io.*;
 import java.util.*;
+
 public class alldifferentdirections {
 	public static void main(String[] args) throws IOException {
-		BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n;
-		while((n = Integer.parseInt(scan.readLine())) != 0) {
+		while((n = Integer.parseInt(br.readLine())) != 0) {
 			ArrayList<double[]> coords = new ArrayList<>();
 			while(n-- > 0) {
-				String[] arr = scan.readLine().split(" ");
+				String[] arr = br.readLine().split(" ");
 				double[] cur = new double[2];
 				cur[0] = Double.parseDouble(arr[0]);
 				cur[1] = Double.parseDouble(arr[1]);
@@ -46,6 +47,6 @@ public class alldifferentdirections {
 			}
 			System.out.println(String.format("%.4f %.4f %.4f", retx, rety, worst));
 		}
-		scan.close();
+		br.close();
 	}
 }
