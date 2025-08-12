@@ -27,8 +27,8 @@ public class anewalphabet {
 			"`/",
 			"2"};
 	public static void main(String[] args) throws IOException {
-		BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-		String input = scan.readLine();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = br.readLine();
 		for(char c : input.toCharArray()) {
 			if('a' <= c && c <= 'z')
 				System.out.print(lookup[c - 'a']);
