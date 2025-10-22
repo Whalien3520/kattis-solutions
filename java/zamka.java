@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class zamka {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int L = Integer.parseInt(br.readLine()), D = Integer.parseInt(br.readLine()), X = Integer.parseInt(br.readLine()), N = L, M = D;
         while(digitSum(N) != X)
             N++;
@@ -20,4 +20,5 @@ public class zamka {
         }
         return ret;
     }
+
 }
