@@ -1,9 +1,11 @@
-import java.util.*;
 import java.io.*;
+import java.math.*;
+import java.util.*;
 
 public class aboveaverage {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter br = new BufferedWriter(new InputStreamWriter(System.out));
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int c = Integer.parseInt(br.readLine()), arrInd, n = -1;
 		double avg = 0;
 		int[] arr;
@@ -24,7 +26,7 @@ public class aboveaverage {
 					for(int i : list)
 						if(i > avg)
 							count += 1;
-					System.out.println(String.format("%.3f%%", count / n * 100));
+					bw.write(String.format("%.3f%%\n", count / n * 100));
 					n = -1;
 					c--;
 					list = new ArrayList<>();
@@ -33,5 +35,6 @@ public class aboveaverage {
 				arrInd++;
 			}
 		}
+		bw.flush();
 	}
 }
