@@ -1,3 +1,5 @@
+// problem link: https://open.kattis.com/problems/aboveaverage?tab=submissions
+
 import java.io.*;
 import java.math.*;
 import java.util.*;
